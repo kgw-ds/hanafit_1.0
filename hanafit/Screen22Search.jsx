@@ -58,11 +58,11 @@ const SearchScreen = ({ onBack, onOpen }) => {
           }}>카테고리로 찾기</div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
             <CategoryGridTile emoji="🏠" label="주거" onClick={() => onOpen("list")}/>
-            <CategoryGridTile emoji="🚌" label="교통"/>
-            <CategoryGridTile emoji="💰" label="저축"/>
-            <CategoryGridTile emoji="📚" label="학업"/>
-            <CategoryGridTile emoji="💼" label="취업"/>
-            <CategoryGridTile emoji="💳" label="소비"/>
+            <CategoryGridTile emoji="🚌" label="교통" onClick={() => onOpen("list")}/>
+            <CategoryGridTile emoji="💰" label="저축" onClick={() => onOpen("list")}/>
+            <CategoryGridTile emoji="📚" label="학업" onClick={() => onOpen("list")}/>
+            <CategoryGridTile emoji="💼" label="취업" onClick={() => onOpen("list")}/>
+            <CategoryGridTile emoji="💳" label="소비" onClick={() => onOpen("list")}/>
           </div>
         </div>
       </div>

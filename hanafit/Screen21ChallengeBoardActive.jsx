@@ -1,6 +1,6 @@
 // Screen 21 — 챌린지 보드 (재방문 · 진행 중 3/5)
 // 옅은 그린 그라데이션 · 진행 헤더 · 5개 미션 (3 완료, 미션4 다음 강조, 미션5 todo)
-const ChallengeBoardActiveScreen = ({ onBack, onOpenMission, onCheckin }) => (
+const ChallengeBoardActiveScreen = ({ onBack, onOpenMission, onChangeMentor }) => (
   <div style={{
     flex: 1, display: "flex", flexDirection: "column",
     background: HF_GREEN_BG, overflow: "hidden", position: "relative",
@@ -74,7 +74,7 @@ const ChallengeBoardActiveScreen = ({ onBack, onOpenMission, onCheckin }) => (
       display: "flex", flexDirection: "column", gap: 8,
     }}>
       <PrimaryCTA onClick={() => onOpenMission("missionDetail")}>다음 미션 시작하기 →</PrimaryCTA>
-      <HFOutlineBtnPurple onClick={onCheckin}>주간 체크인 보기</HFOutlineBtnPurple>
+      <HFOutlineBtnPurple onClick={onChangeMentor}>다른 멘토로 변경</HFOutlineBtnPurple>
     </div>
   </div>
 );

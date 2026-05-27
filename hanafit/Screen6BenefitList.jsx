@@ -1,6 +1,6 @@
 // Screen 6 — 맞춤 혜택 리스트
 // 흰 배경 · 헤더 + 검색 · 좌측 두 줄 헤더 · 필터 칩 가로 스크롤 · 4개 혜택 카드
-const BenefitListScreen = ({ onBack, onOpenDetail }) => {
+const BenefitListScreen = ({ onBack, onOpenDetail, onOpen }) => {
   const [filter, setFilter] = useStateHF("전체");
   const filters = ["전체", "신청 추천", "바로 가능", "확인 필요", "마감 임박"];
 
@@ -10,7 +10,14 @@ const BenefitListScreen = ({ onBack, onOpenDetail }) => {
       background: "#FFFFFF", overflow: "hidden",
     }}>
       <DrillHeader title="놓친 혜택" onBack={onBack}
-        right={<HanaIcon name="search" size={22} color="#22262B"/>}/>
+        right={
+          <button onClick={() => onOpen("search")} style={{
+            background: "none", border: "none", padding: 4,
+            cursor: "pointer", color: "#22262B", display: "flex",
+          }}>
+            <HanaIcon name="search" size={22}/>
+          </button>
+        }/>
 
       <div style={{ flex: 1, overflow: "auto", padding: "4px 20px 24px" }}>
         <h1 style={{
@@ -53,7 +60,8 @@ const BenefitListScreen = ({ onBack, onOpenDetail }) => {
             illust="assets/illust/hanafit-transit.svg"
             infoLines={["바로 등록 가능", "매월 자동 환급"]}
             sourceNote="공식 출처: 국토교통부 · 최종 확인 2026.05.18"
-            secondary="자세히 보기" primary="지금 등록하러 가기"/>
+            secondary="자세히 보기" primary="지금 등록하러 가기"
+            onSecondary={onOpenDetail} onPrimary={onOpenDetail}/>
 
           <HFBenefitCard
             status="review" statusLabel="확인 필요"
@@ -62,7 +70,8 @@ const BenefitListScreen = ({ onBack, onOpenDetail }) => {
             illust="assets/illust/hanafit-study.svg"
             infoLines={["서울 거주 청년 대상", "소득 기준 확인 필요"]}
             sourceNote="공식 출처: 서울시 청년정책 · 최종 확인 2026.05.15"
-            secondary="자세히 보기" primary="AI에게 물어보기"/>
+            secondary="자세히 보기" primary="AI에게 물어보기"
+            onSecondary={onOpenDetail} onPrimary={onOpenDetail}/>
 
           <HFBenefitCard
             status="interest" statusLabel="관심 등록"
@@ -71,7 +80,8 @@ const BenefitListScreen = ({ onBack, onOpenDetail }) => {
             illust="assets/illust/hanafit-piggy.svg"
             infoLines={["하나은행 출시 예정", "사전 알림 신청 가능"]}
             sourceNote="공식 출처: 하나은행 상품몰 · 최종 확인 2026.05.20"
-            secondary="자세히 보기" primary="관심 등록"/>
+            secondary="자세히 보기" primary="관심 등록"
+            onSecondary={onOpenDetail} onPrimary={onOpenDetail}/>
         </div>
 
         <div style={{ marginTop: 24 }}>

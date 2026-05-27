@@ -6,7 +6,14 @@ const ProductDetailScreen = ({ onBack, onJoin, onAskAI }) => (
     flex: 1, display: "flex", flexDirection: "column",
     background: "#F4F4F4", overflow: "hidden", position: "relative",
   }}>
-    <DrillHeader title="적금" onBack={onBack} right={<HanaIcon name="headphones" size={22}/>}/>
+    <DrillHeader title="적금" onBack={onBack} right={
+      <button onClick={onAskAI} style={{
+        background: "none", border: "none", padding: 4,
+        cursor: "pointer", color: "#22262B", display: "flex",
+      }}>
+        <HanaIcon name="headphones" size={22}/>
+      </button>
+    }/>
 
     <div style={{
       flex: 1, overflow: "auto",

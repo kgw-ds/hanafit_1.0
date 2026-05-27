@@ -68,7 +68,7 @@ const ChallengeBoardInitScreen = ({ onBack, onOpenMission }) => (
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         {BOARD_MISSIONS_INIT.map(m => (
           <BoardMissionRow key={m.num} {...m}
-            onClick={m.num === "4" ? () => onOpenMission("missionDetail") : undefined}/>
+            onClick={() => onOpenMission("missionDetail")}/>
         ))}
       </div>
     </div>

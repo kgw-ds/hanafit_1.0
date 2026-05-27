@@ -9,8 +9,18 @@ const ResultHomeScreen = ({ onOpen }) => (
     <DrillHeader title="하나핏" onBack={() => onOpen("home")}
       right={
         <>
-          <HanaIcon name="settings" size={22} color="#22262B"/>
-          <HanaIcon name="bell" size={22} color="#22262B"/>
+          <button style={{
+            background: "none", border: "none", cursor: "pointer",
+            padding: 4, color: "#22262B", display: "flex",
+          }} onClick={() => onOpen("notif-settings")}>
+            <HanaIcon name="settings" size={22}/>
+          </button>
+          <button style={{
+            background: "none", border: "none", cursor: "pointer",
+            padding: 4, color: "#22262B", display: "flex",
+          }} onClick={() => onOpen("notifications")}>
+            <HanaIcon name="bell" size={22}/>
+          </button>
         </>
       }/>
 
@@ -62,9 +72,12 @@ const ResultHomeScreen = ({ onOpen }) => (
         display: "flex", gap: 10, overflowX: "auto",
         scrollSnapType: "x mandatory", paddingBottom: 4,
       }}>
-        <HFQuickActionCard emoji="🤖" title="AI 상담" sub="질문 한 번에 해결"/>
-        <HFQuickActionCard emoji="👥" title="또래 비교" sub="익명 통계로 보기" accent="#7567D5"/>
-        <HFQuickActionCard emoji="📋" title="체크리스트" sub="신청 단계 확인" accent="#7567D5"/>
+        <HFQuickActionCard emoji="🤖" title="AI 상담" sub="질문 한 번에 해결"
+          onClick={() => onOpen("aichat-new")}/>
+        <HFQuickActionCard emoji="👥" title="또래 비교" sub="익명 통계로 보기" accent="#7567D5"
+          onClick={() => onOpen("peer")}/>
+        <HFQuickActionCard emoji="📊" title="컬린더" sub="마감 일정 조회" accent="#7567D5"
+          onClick={() => onOpen("calendar")}/>
       </div>
 
       {/* Recommended actions */}
@@ -77,7 +90,8 @@ const ResultHomeScreen = ({ onOpen }) => (
           sub="월 최대 20만원 가능성"
           onClick={() => onOpen("detail")}/>
         <HFRecRow emoji="💰" title="생활비 통장 분리"
-          sub="자동저축 시작" last/>
+          sub="자동저축 시작"
+          onClick={() => onOpen("detail")} last/>
       </Card>
 
       <div style={{ marginTop: 18 }}>

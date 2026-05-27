@@ -80,7 +80,8 @@ const MissionCompleteScreen = ({ onClose, onNext }) => (
         background: "#fff", borderRadius: 20, padding: "16px 20px",
         display: "flex", alignItems: "center", gap: 14,
         boxShadow: "0 2px 8px rgba(34,38,43,0.03)",
-      }}>
+        cursor: "pointer",
+      }} className="hana-press" onClick={onNext}>
         <div style={{
           width: 44, height: 44, borderRadius: 14, background: "#E0F5F0",
           display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0,

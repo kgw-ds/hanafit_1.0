@@ -54,7 +54,7 @@ const NotificationsScreen = ({ onBack, onOpen }) => {
             title="이체 완료"
             body={<>청년미래적금 10만원 이체 완료<br/><span style={{color:"#5E6976"}}>현재 잔액 70만원</span></>}
             time="어제 09:00"
-            onClick={() => onOpen("progress")}/>
+            onClick={() => onOpen("boardActive")}/>
           <HFNotificationItem
             icon="📊" kind="info"
             title="또래 변화"
@@ -72,6 +72,7 @@ const NotificationsScreen = ({ onBack, onOpen }) => {
             title="시스템"
             body={<>마이데이터 재인증 필요<br/><span style={{color:"#5E6976"}}>안전한 이용을 위해 다시 연결</span></>}
             time="3일 전"
+            onClick={() => onOpen("consent")}
             last/>
         </Card>
 

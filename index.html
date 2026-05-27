@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>하나핏 (HanaFit) · UI Kit</title>
+  <title>하나핏 (HanaFit) · UI Kit — Final Handoff</title>
 
   <link rel="stylesheet" href="styles.css">
   <style>
@@ -23,8 +23,8 @@
       gap: 28px; padding: 24px;
     }
     .side {
-      display: flex; flex-direction: column; gap: 10px;
-      width: 340px; max-height: calc(100vh - 48px);
+      display: flex; flex-direction: column; gap: 8px;
+      width: 360px; max-height: calc(100vh - 48px);
       overflow-y: auto; padding-right: 4px;
     }
     .side h1 {
@@ -33,7 +33,7 @@
     }
     .side .desc { font-size: 12px; color: #5E6976; line-height: 1.45; }
     .group-label {
-      margin-top: 8px; padding: 0 2px;
+      margin-top: 6px; padding: 0 2px;
       font-size: 10px; color: #8F97A0;
       text-transform: uppercase; letter-spacing: 0.08em;
       font-family: 'SF Mono', Menlo, monospace; font-weight: 600;
@@ -49,7 +49,7 @@
     }
     .jump button .num {
       display: inline-block; font-weight: 700; color: #00A38D;
-      margin-right: 6px; min-width: 16px; font-size: 11px;
+      margin-right: 6px; min-width: 18px; font-size: 11px;
     }
     .jump button:hover { border-color: #00A38D; background: #F8FBFA; }
     .jump button.active {
@@ -69,8 +69,8 @@
 <body>
   <div class="stage">
     <div class="side">
-      <h1>하나핏 · UI Kit</h1>
-      <div class="desc">청년 금융 어드바이저 (390×844). 페르소나: 최서연(24세 · 서울 자취)</div>
+      <h1>하나핏 · 최종 핸드오프</h1>
+      <div class="desc">청년 금융 어드바이저 (390×844) · 페르소나: 최서연(24세, 서울 자취)</div>
 
       <div class="group-label">① 진단까지</div>
       <div class="jump" id="jump">
@@ -92,44 +92,45 @@
 
       <div class="group-label">③ AI 상담</div>
       <div class="jump">
-        <button data-go="aichat"><span class="num">10</span>AI 첫 진입</button>
-        <button data-go="aianswer"><span class="num">11</span>답변 진행</button>
+        <button data-go="aichat-new"><span class="num">10</span>AI 첫 진입</button>
+        <button data-go="aianswer-new"><span class="num">11</span>AI 대화</button>
         <button data-go="history"><span class="num">12</span>상담 이력</button>
       </div>
 
-      <div class="group-label">④ 또래 & 멘토</div>
+      <div class="group-label">④ 또래 따라하기</div>
       <div class="jump">
-        <button data-go="peer"><span class="num">13</span>또래 FIT</button>
-        <button data-go="follow"><span class="num">14</span>따라 FIT</button>
+        <button data-go="peer"><span class="num">13</span>또래 비교</button>
+        <button data-go="follow"><span class="num">14</span>또래 따라하기</button>
         <button data-go="mentor"><span class="num">15</span>멘토 변경</button>
+        <button data-go="mentor-detail"><span class="num">15-1</span>멘토 상세</button>
       </div>
 
-      <div class="group-label">⑤ 챌린지</div>
+      <div class="group-label">⑤ 챌린지 (가입 플로우)</div>
       <div class="jump">
         <button data-go="boardInit"><span class="num">16</span>보드 0/5</button>
         <button data-go="missionDetail"><span class="num">17</span>미션 상세</button>
         <button data-go="productDetail"><span class="num">17-1</span>적금 상세</button>
         <button data-go="easyJoin"><span class="num">17-2</span>간편 가입</button>
         <button data-go="missionJoin"><span class="num">18</span>가입 진행</button>
-        <button data-go="missionDone"><span class="num">19</span>완료 축하</button>
+        <button data-go="missionDone"><span class="num">19</span>미션 완료</button>
       </div>
 
       <div class="group-label">⑥ 진행 → 달성</div>
       <div class="jump">
-        <button data-go="checkin"><span class="num">20</span>주간 체크인</button>
-        <button data-go="boardActive"><span class="num">21</span>보드 3/5</button>
-        <button data-go="challengeDone"><span class="num">22</span>5/5 달성</button>
+        <button data-go="boardActive"><span class="num">20</span>보드 3/5</button>
+        <button data-go="challengeDone"><span class="num">21</span>5/5 달성</button>
       </div>
 
       <div class="group-label">⑦ 재방문</div>
       <div class="jump">
-        <button data-go="revisit"><span class="num">23</span>재방문 홈</button>
-        <button data-go="notifications"><span class="num">24</span>알림센터</button>
-        <button data-go="notif-settings"><span class="num">25</span>알림 설정</button>
+        <button data-go="revisit"><span class="num">22</span>재방문 홈</button>
+        <button data-go="savings-report"><span class="num">22-1</span>절감 리포트</button>
+        <button data-go="notifications"><span class="num">23</span>알림센터</button>
+        <button data-go="notif-settings"><span class="num">24</span>알림 설정</button>
       </div>
 
       <div class="credit">
-        🎨 민트 그라데이션 · 3D 클레이 일러스트<br/>
+        🎨 민트 그라데이션 · 보라 글래스 (AI) · 그린 (챌린지)<br/>
         Green #00A38D · Purple #7567D5
       </div>
     </div>
@@ -154,15 +155,12 @@
   <script type="text/babel" src="hanafit/Screen5ResultHome.jsx"></script>
   <script type="text/babel" src="hanafit/Screen6BenefitList.jsx"></script>
   <script type="text/babel" src="hanafit/Screen7BenefitDetail.jsx"></script>
-  <script type="text/babel" src="hanafit/Screen8AIChatIntro.jsx"></script>
-  <script type="text/babel" src="hanafit/Screen9AIChatAnswer.jsx"></script>
   <script type="text/babel" src="hanafit/Screen10PeerCompare.jsx"></script>
   <script type="text/babel" src="hanafit/Screen11FollowIntro.jsx"></script>
   <script type="text/babel" src="hanafit/Screen16ChallengeBoardInit.jsx"></script>
   <script type="text/babel" src="hanafit/Screen17MissionDetail.jsx"></script>
   <script type="text/babel" src="hanafit/Screen18MissionProgressJoin.jsx"></script>
   <script type="text/babel" src="hanafit/Screen19MissionComplete.jsx"></script>
-  <script type="text/babel" src="hanafit/Screen20WeeklyCheckin.jsx"></script>
   <script type="text/babel" src="hanafit/Screen21ChallengeBoardActive.jsx"></script>
   <script type="text/babel" src="hanafit/Screen22ChallengeComplete.jsx"></script>
   <script type="text/babel" src="hanafit/Screen18RevisitHome.jsx"></script>
@@ -175,14 +173,19 @@
   <script type="text/babel" src="hanafit/Screen26ApplicationChecklist.jsx"></script>
   <script type="text/babel" src="hanafit/Screen27ProductDetail.jsx"></script>
   <script type="text/babel" src="hanafit/Screen28EasyJoin.jsx"></script>
+  <script type="text/babel" src="hanafit/Screen29AIChatNewIntro.jsx"></script>
+  <script type="text/babel" src="hanafit/Screen30AIChatNewAnswer.jsx"></script>
+  <script type="text/babel" src="hanafit/Screen31MentorDetail.jsx"></script>
+  <script type="text/babel" src="hanafit/Screen32SavingsReport.jsx"></script>
 
   <script type="text/babel">
     const Root = () => {
       const [screen, setScreen] = React.useState("home");
+      const [pendingQuery, setPendingQuery] = React.useState(null);
       React.useEffect(() => { window.__hfSet = setScreen; }, []);
 
       let body = null;
-      if (screen === "home")      body = <HanafitHomeScreen onOpen={setScreen}/>;
+      if (screen === "home") body = <HanafitHomeScreen onOpen={setScreen}/>;
       else if (screen === "intro") body = <IntroScreen
         onBack={() => setScreen("home")}
         onNext={() => setScreen("consent")}
@@ -196,19 +199,30 @@
       else if (screen === "result") body = <ResultHomeScreen onOpen={setScreen}/>;
       else if (screen === "list") body = <BenefitListScreen
         onBack={() => setScreen("result")}
-        onOpenDetail={() => setScreen("detail")}/>;
+        onOpenDetail={() => setScreen("detail")}
+        onOpen={setScreen}/>;
       else if (screen === "detail") body = <BenefitDetailScreen
         onBack={() => setScreen("list")}
         onChecklist={() => setScreen("checklist")}
-        onAskAI={() => setScreen("aichat")}/>;
+        onAskAI={() => setScreen("aichat-new")}/>;
       else if (screen === "checklist") body = <ApplicationChecklistScreen
         onBack={() => setScreen("detail")}
-        onAskAI={() => setScreen("aichat")}/>;
-      else if (screen === "aichat") body = <AIChatIntroScreen
+        onAskAI={() => setScreen("aichat-new")}/>;
+      else if (screen === "search") body = <SearchScreen
+        onBack={() => setScreen("revisit")}
+        onOpen={setScreen}/>;
+      else if (screen === "calendar") body = <CalendarScreen
+        onBack={() => setScreen("revisit")}
+        onOpen={setScreen}/>;
+      else if (screen === "aichat-new") body = <AIChatNewIntroScreen
         onBack={() => setScreen("result")}
-        onSend={() => setScreen("aianswer")}/>;
-      else if (screen === "aianswer") body = <AIChatAnswerScreen
-        onBack={() => setScreen("aichat")}
+        onSend={(q) => { setPendingQuery(q); setScreen("aianswer-new"); }}/>;
+      else if (screen === "aianswer-new") body = <AIChatNewAnswerScreen
+        onBack={() => { setPendingQuery(null); setScreen("aichat-new"); }}
+        onOpen={setScreen}
+        initialQuery={pendingQuery}/>;
+      else if (screen === "history") body = <ChatHistoryScreen
+        onBack={() => setScreen("notifications")}
         onOpen={setScreen}/>;
       else if (screen === "peer") body = <PeerCompareScreen
         onBack={() => setScreen("result")}
@@ -217,17 +231,24 @@
         onBack={() => setScreen("peer")}
         onNext={() => setScreen("boardInit")}
         onOtherMentor={() => setScreen("mentor")}/>;
+      else if (screen === "mentor") body = <MentorPickerScreen
+        onBack={() => setScreen("boardActive")}
+        onChange={() => setScreen("boardActive")}
+        onMentorDetail={() => setScreen("mentor-detail")}/>;
+      else if (screen === "mentor-detail") body = <MentorDetailScreen
+        onBack={() => setScreen("mentor")}
+        onFollow={() => setScreen("boardActive")}/>;
       else if (screen === "boardInit") body = <ChallengeBoardInitScreen
         onBack={() => setScreen("follow")}
         onOpenMission={() => setScreen("missionDetail")}/>;
       else if (screen === "missionDetail") body = <MissionDetailScreen
         onBack={() => setScreen("boardInit")}
         onStart={() => setScreen("productDetail")}
-        onAskAI={() => setScreen("aichat")}/>;
+        onAskAI={() => setScreen("aichat-new")}/>;
       else if (screen === "productDetail") body = <ProductDetailScreen
         onBack={() => setScreen("missionDetail")}
         onJoin={() => setScreen("easyJoin")}
-        onAskAI={() => setScreen("aichat")}/>;
+        onAskAI={() => setScreen("aichat-new")}/>;
       else if (screen === "easyJoin") body = <EasyJoinScreen
         onBack={() => setScreen("productDetail")}
         onNext={() => setScreen("missionJoin")}/>;
@@ -237,13 +258,10 @@
       else if (screen === "missionDone") body = <MissionCompleteScreen
         onClose={() => setScreen("revisit")}
         onNext={() => setScreen("boardActive")}/>;
-      else if (screen === "checkin") body = <WeeklyCheckinScreen
-        onBack={() => setScreen("boardActive")}
-        onSubmit={() => setScreen("boardActive")}/>;
       else if (screen === "boardActive") body = <ChallengeBoardActiveScreen
         onBack={() => setScreen("revisit")}
         onOpenMission={() => setScreen("missionDetail")}
-        onCheckin={() => setScreen("checkin")}/>;
+        onChangeMentor={() => setScreen("mentor")}/>;
       else if (screen === "challengeDone") body = <ChallengeCompleteScreen
         onBack={() => setScreen("revisit")}
         onNextMentor={() => setScreen("mentor")}
@@ -254,17 +272,8 @@
         onOpen={setScreen}/>;
       else if (screen === "notif-settings") body = <NotifSettingsScreen
         onBack={() => setScreen("revisit")}/>;
-      else if (screen === "search") body = <SearchScreen
+      else if (screen === "savings-report") body = <SavingsReportScreen
         onBack={() => setScreen("revisit")}
-        onOpen={setScreen}/>;
-      else if (screen === "calendar") body = <CalendarScreen
-        onBack={() => setScreen("revisit")}
-        onOpen={setScreen}/>;
-      else if (screen === "mentor") body = <MentorPickerScreen
-        onBack={() => setScreen("boardActive")}
-        onChange={() => setScreen("boardActive")}/>;
-      else if (screen === "history") body = <ChatHistoryScreen
-        onBack={() => setScreen("notifications")}
         onOpen={setScreen}/>;
 
       const showTab = (screen === "home");

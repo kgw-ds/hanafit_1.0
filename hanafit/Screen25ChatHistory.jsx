@@ -53,30 +53,34 @@ const ChatHistoryScreen = ({ onBack, onOpen }) => {
             snippet="신청 가능성이 높고, 거주 형태와 소득 기준은 확인 필요해요. 자세한 자격 조건은 정부24 공식 페이지에서..."
             time="18:08"
             last
-            onClick={() => onOpen("aianswer")}/>
+            onClick={() => onOpen("aichat-new")}/>
         </HistoryGroup>
 
         <HistoryGroup title="어제">
           <HFHistoryItem
             question="K-패스 어떻게 신청해?"
             snippet="K-패스 카드를 발급받은 후 K-패스 앱에서 등록하시면 자동으로 환급이 시작돼요..."
-            time="14:20"/>
+            time="14:20"
+            onClick={() => onOpen("aichat-new")}/>
           <HFHistoryItem
             question="청년미래적금 우대금리 조건은?"
             snippet="기본금리 3.5%에 하나원큐 신규 가입 +1.0%, K-패스 연동 +0.5%, 자동이체 6개월 유지 +1.0%로..."
             time="09:35"
-            last/>
+            last
+            onClick={() => onOpen("aichat-new")}/>
         </HistoryGroup>
 
         <HistoryGroup title="이번 주">
           <HFHistoryItem
             question="청년 장학금 자격 확인"
             snippet="서울시 청년 생활장학금은 소득 기준이 가구 중위소득 70% 이하예요..."
-            time="3일 전"/>
+            time="3일 전"
+            onClick={() => onOpen("aichat-new")}/>
           <HFHistoryItem
             question="자동이체 변경 가능?"
-            snippet="네, 마이페이지 > 챌린지 관리에서 자동이체 금액과 날짜를 변경할 수 있어요..."
-            time="5일 전" last/>
+            snippet="네, 챌린지 보드에서 자동이체 금액과 날짜를 변경할 수 있어요..."
+            time="5일 전" last
+            onClick={() => onOpen("aichat-new")}/>
         </HistoryGroup>
 
         <div style={{ marginTop: 18 }}>

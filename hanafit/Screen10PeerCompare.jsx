@@ -139,7 +139,7 @@ const PeerCompareScreen = ({ onBack, onOpen }) => (
       background: "linear-gradient(180deg, rgba(239,248,240,0) 0%, rgba(219,239,226,0.95) 30%, #DBEFE2 100%)",
       display: "flex", flexDirection: "column", gap: 10,
     }}>
-      <PrimaryCTA onClick={() => onOpen("follow")}>따라 FIT 시작하기 →</PrimaryCTA>
+      <PrimaryCTA onClick={() => onOpen("follow")}>또래 따라하기 시작 →</PrimaryCTA>
       <HFOutlineBtnPurple onClick={() => onOpen("list")}>놓친 혜택 보기</HFOutlineBtnPurple>
     </div>
   </div>

@@ -1,4 +1,4 @@
-// Screen 11 — 따라FIT 인트로
+// Screen 11 — 또래 따라하기 (멘토 소개 및 5가지 미션)
 // 옅은 그린 그라데이션 · 큰 헤더 · 멘토 카드 · 5가지 미션 미리보기 · CTA
 const FOLLOW_MISSIONS = [
   { num: "1", icon: "🚌", title: "K-패스 등록",
@@ -18,7 +18,7 @@ const FollowIntroScreen = ({ onBack, onNext, onOtherMentor }) => (
     flex: 1, display: "flex", flexDirection: "column",
     background: HF_GREEN_BG, overflow: "hidden", position: "relative",
   }}>
-    <DrillHeader title="따라 FIT" onBack={onBack}/>
+    <DrillHeader title="또래 따라하기" onBack={onBack}/>
 
     <div style={{ flex: 1, overflow: "auto", padding: "4px 20px 200px" }}>
       <h1 style={{

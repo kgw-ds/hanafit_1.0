@@ -1,6 +1,6 @@
 // Screen 24 — 멘토 선택/변경
 // 흰 배경 · 좌측 두 줄 헤더 · 필터 칩 · 현재 멘토 (강조 그린) · 추천 멘토 3개
-const MentorPickerScreen = ({ onBack, onChange }) => {
+const MentorPickerScreen = ({ onBack, onChange, onMentorDetail }) => {
   const [filter, setFilter] = useStateHF("전체");
   const filters = ["전체", "내 또래", "목표별", "지역별"];
 
@@ -40,7 +40,9 @@ const MentorPickerScreen = ({ onBack, onChange }) => {
               "K-패스로 교통비 30% 환급",
               "체크카드 1개로 소비 통제",
             ]}
-            social="함께한 지 7개월"/>
+            social="함께한 지 7개월"
+            ctaLabel="프로필 자세히 보기"
+            onCta={onMentorDetail}/>
         </div>
 
         {/* Recommended */}

@@ -114,9 +114,9 @@ const CalendarScreen = ({ onBack, onOpen }) => {
             fontSize: 16, fontWeight: 700, color: "#22262B", letterSpacing: "-0.02em",
           }}>이번 달 마감 임박 TOP 3</div>
           <Card style={{ padding: "0 16px" }}>
-            <UrgentRow rank="1" title="청년월세지원" deadline="3"/>
-            <UrgentRow rank="2" title="K-패스 신규 가입" deadline="7"/>
-            <UrgentRow rank="3" title="청년 생활장학금" deadline="12" last/>
+            <UrgentRow rank="1" title="청년월세지원" deadline="3" onClick={() => onOpen("detail")}/>
+            <UrgentRow rank="2" title="K-패스 신규 가입" deadline="7" onClick={() => onOpen("detail")}/>
+            <UrgentRow rank="3" title="청년 생활장학금" deadline="12" onClick={() => onOpen("detail")} last/>
           </Card>
         </div>
 
@@ -136,11 +136,12 @@ const dayOfWeek = (y, m, d) => {
   return labels[new Date(y, m - 1, d).getDay()];
 };
 
-const UrgentRow = ({ rank, title, deadline, last }) => (
-  <div style={{
+const UrgentRow = ({ rank, title, deadline, last, onClick }) => (
+  <div onClick={onClick} className={onClick ? "hana-press" : ""} style={{
     display: "flex", alignItems: "center", gap: 14,
     padding: "16px 4px",
     borderBottom: last ? "none" : "1px solid #F0F0F0",
+    cursor: onClick ? "pointer" : "default",
   }}>
     <span style={{
       width: 28, height: 28, borderRadius: 14, background: "#FFEDED",

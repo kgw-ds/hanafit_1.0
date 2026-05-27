@@ -70,7 +70,7 @@ const RevisitHomeScreen = ({ onOpen }) => (
             emoji="🤖" tone="#7567D5" toneBg="#F0E8F8"
             label="AI 상담" value="궁금한 점 물어보기"
             sub="자격·서류·소득 기준"
-            onClick={() => onOpen("aichat")}/>
+            onClick={() => onOpen("aichat-new")}/>
           <ValueEntry
             emoji="👥" tone="#7567D5" toneBg="#F0E8F8"
             label="또래 비교" value="1,089명과 비교"
@@ -87,10 +87,10 @@ const RevisitHomeScreen = ({ onOpen }) => (
         }}>지금 할 수 있어요</div>
         <Card style={{ padding: "0" }}>
           <NextActionRow
-            tag="이번 주 인증" emoji="✅"
-            title="체크카드 1개로 소비 통제"
-            sub="주간 인증 2/4주 진행 중"
-            onClick={() => onOpen("checkin")}/>
+            tag="다음 미션" emoji="🏦"
+            title="청년미래적금 가입"
+            sub="또래 81%가 들고 있는 적금"
+            onClick={() => onOpen("missionDetail")}/>
           <NextActionRow
             tag="마감 임박" tagColor="#FF5C5C" tagBg="#FFEDED"
             emoji="🏠" deadline="3"
@@ -103,7 +103,7 @@ const RevisitHomeScreen = ({ onOpen }) => (
 
       {/* 이번 달 절감 */}
       <div style={{ marginTop: 22 }}>
-        <Card style={{ padding: "18px 20px" }} onClick={() => onOpen("peer")}>
+        <Card style={{ padding: "18px 20px" }} onClick={() => onOpen("savings-report")}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <span style={{ fontSize: 14, color: "#5E6976", letterSpacing: "-0.02em" }}>이번 달 절감</span>
             <HanaIcon name="chevron" size={16} color="#8F97A0"/>
