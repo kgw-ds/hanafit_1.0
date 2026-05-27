@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 240" width="260" height="240">
+  <defs>
+    <radialGradient id="hfFace" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#F6FDF9"></stop>
+      <stop offset="100%" stop-color="#C8E9DD"></stop>
+    </radialGradient>
+    <radialGradient id="hfBody" cx="50%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#A8DBC8"></stop>
+      <stop offset="100%" stop-color="#5BBD9A"></stop>
+    </radialGradient>
+    <radialGradient id="hfCoin" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFEFA8"></stop>
+      <stop offset="100%" stop-color="#E8AE3B"></stop>
+    </radialGradient>
+    <radialGradient id="hfFloor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(34,38,43,0.18)"></stop>
+      <stop offset="100%" stop-color="rgba(34,38,43,0)"></stop>
+    </radialGradient>
+    <radialGradient id="hfLens" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.7)"></stop>
+      <stop offset="50%" stop-color="rgba(190,222,212,0.55)"></stop>
+      <stop offset="100%" stop-color="rgba(115,180,160,0.4)"></stop>
+    </radialGradient>
+  </defs>
+  
+  <ellipse cx="130" cy="218" rx="90" ry="9" fill="url(#hfFloor)"></ellipse>
+
+  
+  <circle cx="218" cy="58" r="16" fill="url(#hfCoin)"></circle>
+  <text x="218" y="64" text-anchor="middle" font-size="16" font-weight="800" fill="#9C6A1E" font-family="-apple-system, system-ui, sans-serif">₩</text>
+  <circle cx="200" cy="100" r="12" fill="url(#hfCoin)" opacity="0.85"></circle>
+  <circle cx="232" cy="118" r="9" fill="url(#hfCoin)" opacity="0.7"></circle>
+
+  
+  <ellipse cx="115" cy="170" rx="58" ry="38" fill="url(#hfBody)"></ellipse>
+  
+  <path d="M155 158 Q175 142 180 125" stroke="#5BBD9A" stroke-width="14" stroke-linecap="round" fill="none"></path>
+  
+  <circle cx="115" cy="100" r="58" fill="url(#hfFace)"></circle>
+  
+  <circle cx="98" cy="100" r="5" fill="#22262B"></circle>
+  <circle cx="132" cy="100" r="5" fill="#22262B"></circle>
+  
+  <circle cx="86" cy="116" r="6" fill="rgba(255,140,140,0.45)"></circle>
+  <circle cx="144" cy="116" r="6" fill="rgba(255,140,140,0.45)"></circle>
+  
+  <path d="M105 122 q10 8 20 0" stroke="#22262B" stroke-width="2.4" fill="none" stroke-linecap="round"></path>
+
+  
+  <circle cx="190" cy="100" r="30" fill="url(#hfLens)" stroke="#5BBD9A" stroke-width="6"></circle>
+  
+  <ellipse cx="178" cy="88" rx="10" ry="6" fill="rgba(255,255,255,0.7)"></ellipse>
+  
+  <path d="M212 122 L235 145" stroke="#5BBD9A" stroke-width="10" stroke-linecap="round"></path>
+  <path d="M212 122 L235 145" stroke="#3FA98D" stroke-width="3" stroke-linecap="round" opacity="0.4"></path>
+</svg>

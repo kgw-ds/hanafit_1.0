@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="roofG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A3D6BD"></stop>
+      <stop offset="100%" stop-color="#5EBB95"></stop>
+    </linearGradient>
+    <linearGradient id="wallG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"></stop>
+      <stop offset="100%" stop-color="#E6EEEC"></stop>
+    </linearGradient>
+    <radialGradient id="houseFloor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(34,38,43,0.18)"></stop>
+      <stop offset="100%" stop-color="rgba(34,38,43,0)"></stop>
+    </radialGradient>
+  </defs>
+  <ellipse cx="100" cy="182" rx="74" ry="8" fill="url(#houseFloor)"></ellipse>
+
+  
+  <circle cx="44" cy="64" r="14" fill="#FFD24A"></circle>
+  <text x="44" y="70" text-anchor="middle" font-size="14" font-weight="800" fill="#9C6A1E" font-family="-apple-system, system-ui, sans-serif">₩</text>
+  <circle cx="160" cy="148" r="14" fill="#FFD24A"></circle>
+  <text x="160" y="154" text-anchor="middle" font-size="14" font-weight="800" fill="#9C6A1E" font-family="-apple-system, system-ui, sans-serif">₩</text>
+  <circle cx="172" cy="58" r="9" fill="#FFE39B"></circle>
+
+  
+  <rect x="64" y="100" width="92" height="74" rx="6" fill="url(#wallG)" stroke="#C8D7D2" stroke-width="1.2"></rect>
+  
+  <path d="M56 102 L110 56 L164 102 Z" fill="url(#roofG)"></path>
+  
+  <rect x="95" y="134" width="22" height="40" rx="3" fill="#5EBB95"></rect>
+  <circle cx="112" cy="156" r="1.4" fill="#FFD24A"></circle>
+  
+  <rect x="74" y="116" width="16" height="16" rx="2" fill="#FFD888"></rect>
+  <line x1="82" y1="116" x2="82" y2="132" stroke="#fff" stroke-width="1"></line>
+  <line x1="74" y1="124" x2="90" y2="124" stroke="#fff" stroke-width="1"></line>
+  <rect x="130" y="116" width="16" height="16" rx="2" fill="#FFD888"></rect>
+  <line x1="138" y1="116" x2="138" y2="132" stroke="#fff" stroke-width="1"></line>
+  <line x1="130" y1="124" x2="146" y2="124" stroke="#fff" stroke-width="1"></line>
+  
+  <path d="M106 142 c -2 -3 -7 0 -5 4 c 2 4 7 6 7 6 c 0 0 5 -2 7 -6 c 2 -4 -3 -7 -5 -4 z" fill="#FF8585"></path>
+</svg>

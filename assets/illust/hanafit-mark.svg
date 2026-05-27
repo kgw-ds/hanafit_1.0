@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <radialGradient id="mintFace" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#E5F7F1"></stop>
+      <stop offset="100%" stop-color="#A8D9C9"></stop>
+    </radialGradient>
+    <radialGradient id="mintBody" cx="50%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#82CDB6"></stop>
+      <stop offset="100%" stop-color="#3FA98D"></stop>
+    </radialGradient>
+    <radialGradient id="floor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(34,38,43,0.14)"></stop>
+      <stop offset="100%" stop-color="rgba(34,38,43,0)"></stop>
+    </radialGradient>
+  </defs>
+  
+  <ellipse cx="40" cy="72" rx="22" ry="3.5" fill="url(#floor)"></ellipse>
+  
+  <ellipse cx="40" cy="58" rx="20" ry="14" fill="url(#mintBody)"></ellipse>
+  
+  <circle cx="40" cy="34" r="24" fill="url(#mintFace)"></circle>
+  
+  <path d="M40 10 Q44 6 46 4" stroke="#3FA98D" stroke-width="2.5" stroke-linecap="round" fill="none"></path>
+  <circle cx="47" cy="3" r="2.6" fill="#FFD24A"></circle>
+  
+  <circle cx="32" cy="34" r="2.6" fill="#22262B"></circle>
+  <circle cx="48" cy="34" r="2.6" fill="#22262B"></circle>
+  
+  <circle cx="28" cy="40" r="2.8" fill="rgba(255,140,140,0.4)"></circle>
+  <circle cx="52" cy="40" r="2.8" fill="rgba(255,140,140,0.4)"></circle>
+  
+  <path d="M35 42 q5 4 10 0" stroke="#22262B" stroke-width="1.6" fill="none" stroke-linecap="round"></path>
+  
+  <circle cx="60" cy="58" r="9" fill="#00A38D"></circle>
+  <path d="M56 58 l3 3 l5 -6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>

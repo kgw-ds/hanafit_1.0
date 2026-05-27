@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+  <defs>
+    <linearGradient id="boxBase" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFC857"></stop>
+      <stop offset="100%" stop-color="#E89A1F"></stop>
+    </linearGradient>
+    <linearGradient id="boxLid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD888"></stop>
+      <stop offset="100%" stop-color="#F5B040"></stop>
+    </linearGradient>
+    <radialGradient id="floor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(34,38,43,0.16)"></stop>
+      <stop offset="100%" stop-color="rgba(34,38,43,0)"></stop>
+    </radialGradient>
+  </defs>
+  
+  <ellipse cx="120" cy="186" rx="84" ry="9" fill="url(#floor)"></ellipse>
+
+  
+  <circle cx="36" cy="46" r="11" fill="#FFD24A"></circle>
+  <text x="36" y="51" text-anchor="middle" font-size="12" font-weight="800" fill="#9C6A1E" font-family="-apple-system, system-ui, sans-serif">₩</text>
+  <circle cx="208" cy="40" r="9" fill="#3FA98D"></circle>
+  <circle cx="220" cy="98" r="14" fill="#7567D5"></circle>
+  <text x="220" y="104" text-anchor="middle" font-size="12" font-weight="800" fill="#fff" font-family="-apple-system, system-ui, sans-serif">%</text>
+  <g fill="#FFB800">
+    <path d="M22 110 l2 4 l4 2 l-4 2 l-2 4 l-2 -4 l-4 -2 l4 -2 z"></path>
+    <path d="M198 168 l2 4 l4 2 l-4 2 l-2 4 l-2 -4 l-4 -2 l4 -2 z"></path>
+  </g>
+
+  
+  <rect x="54" y="92" width="132" height="84" rx="10" fill="url(#boxBase)"></rect>
+  
+  <rect x="112" y="92" width="16" height="84" fill="#FF6B6B"></rect>
+  
+  <rect x="54" y="124" width="132" height="10" fill="rgba(0,0,0,0.06)"></rect>
+
+  
+  <g transform="translate(0 -8)">
+    <rect x="48" y="78" width="144" height="28" rx="8" fill="url(#boxLid)"></rect>
+    
+    <rect x="112" y="78" width="16" height="28" fill="#FF6B6B"></rect>
+    
+    <ellipse cx="100" cy="60" rx="20" ry="14" fill="#FF8585"></ellipse>
+    <ellipse cx="140" cy="60" rx="20" ry="14" fill="#FF8585"></ellipse>
+    <circle cx="120" cy="64" r="7" fill="#FFD24A"></circle>
+    <path d="M118 74 L114 92 M122 74 L126 92" stroke="#E64545" stroke-width="3" stroke-linecap="round"></path>
+  </g>
+</svg>

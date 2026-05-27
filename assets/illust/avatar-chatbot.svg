@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88" width="88" height="88">
+  <defs>
+    <linearGradient id="cbCircle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9A9DF9"></stop>
+      <stop offset="100%" stop-color="#7672E0"></stop>
+    </linearGradient>
+    <radialGradient id="cbHi" cx="35%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.45)"></stop>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"></stop>
+    </radialGradient>
+  </defs>
+  
+  <circle cx="44" cy="44" r="40" fill="url(#cbCircle)"></circle>
+  
+  <circle cx="44" cy="44" r="40" fill="url(#cbHi)"></circle>
+  
+  <g transform="translate(20 24)">
+    <path d="M5 0 H43 a5 5 0 0 1 5 5 v22 a5 5 0 0 1 -5 5 H25 l-7 7 v-7 H5 a5 5 0 0 1 -5 -5 V5 a5 5 0 0 1 5 -5 z" fill="#FFFFFF"></path>
+    
+    <ellipse cx="18" cy="17" rx="2.2" ry="2.6" fill="#2E2A55"></ellipse>
+    <ellipse cx="30" cy="17" rx="2.2" ry="2.6" fill="#2E2A55"></ellipse>
+    
+    <path d="M19 22 q5 4 10 0" stroke="#2E2A55" stroke-width="1.6" fill="none" stroke-linecap="round"></path>
+  </g>
+</svg>

@@ -1,0 +1,57 @@
+/* ============================================================
+   Hana 2.0 — official Hana Financial Group typeface.
+   Six weights ship with this design system; bind them to
+   semantic CSS font-weight values so the type tokens in
+   colors_and_type.css resolve to the right TTF.
+   ============================================================ */
+
+@font-face {
+  font-family: 'Hana2.0';
+  src: url('Hana2-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Hana2.0';
+  src: url('Hana2-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Hana2.0';
+  src: url('Hana2-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+/* Hana2 CM (Communication Medium) — used by Hana for headline
+   communications. We map it to the semibold (600) slot so titles
+   bridging Medium and Bold get the intended display weight. */
+@font-face {
+  font-family: 'Hana2.0';
+  src: url('Hana2-CM.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Hana2.0';
+  src: url('Hana2-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+/* ⭐ Heavy is the signature amount weight (800) — every number
+   in the app is rendered in this cut + −0.04em tracking. */
+@font-face {
+  font-family: 'Hana2.0';
+  src: url('Hana2-Heavy.ttf') format('truetype');
+  font-weight: 800;
+  font-display: swap;
+}
+
+/* If you also want the CM cut explicitly addressable, use
+   font-family: 'Hana2.0 CM'. Same TTF, dedicated family slot. */
+@font-face {
+  font-family: 'Hana2.0 CM';
+  src: url('Hana2-CM.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}

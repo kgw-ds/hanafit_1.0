@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <defs>
+    <linearGradient id="shieldG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#82CDB6"></stop>
+      <stop offset="100%" stop-color="#3FA98D"></stop>
+    </linearGradient>
+    <linearGradient id="shieldFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"></stop>
+      <stop offset="100%" stop-color="#E3F4EC"></stop>
+    </linearGradient>
+    <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(34,38,43,0.18)"></stop>
+      <stop offset="100%" stop-color="rgba(34,38,43,0)"></stop>
+    </radialGradient>
+  </defs>
+  
+  <ellipse cx="120" cy="220" rx="80" ry="9" fill="url(#shadow)"></ellipse>
+
+  
+  <g fill="#FFB800">
+    <path d="M40 60 l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3 z"></path>
+    <path d="M198 50 l2.5 5 l5 2.5 l-5 2.5 l-2.5 5 l-2.5 -5 l-5 -2.5 l5 -2.5 z" opacity="0.75"></path>
+    <path d="M204 168 l2 4 l4 2 l-4 2 l-2 4 l-2 -4 l-4 -2 l4 -2 z" opacity="0.6"></path>
+  </g>
+
+  
+  <path d="M120 32 L186 60 V124 Q186 168 120 198 Q54 168 54 124 V60 Z" fill="url(#shieldG)"></path>
+  
+  <path d="M120 32 L186 60 V96 Q160 80 120 80 Q80 80 54 96 V60 Z" fill="rgba(255,255,255,0.15)"></path>
+  
+  <path d="M120 52 L168 72 V124 Q168 158 120 180 Q72 158 72 124 V72 Z" fill="url(#shieldFace)"></path>
+
+  
+  <rect x="100" y="120" width="40" height="34" rx="8" fill="#3FA98D"></rect>
+  
+  <path d="M108 120 V108 a12 12 0 0 1 24 0 V120" stroke="#3FA98D" stroke-width="6" fill="none"></path>
+  
+  <circle cx="120" cy="134" r="4" fill="#FFFFFF"></circle>
+  <rect x="118.5" y="135" width="3" height="9" rx="1.5" fill="#FFFFFF"></rect>
+
+  
+  <path d="M104 100 l8 8 l16 -18" stroke="#FFD24A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+</svg>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="260" height="260">
+  <defs>
+    <radialGradient id="scanLens" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.85)"></stop>
+      <stop offset="50%" stop-color="rgba(180,230,212,0.65)"></stop>
+      <stop offset="100%" stop-color="rgba(115,180,160,0.4)"></stop>
+    </radialGradient>
+    <radialGradient id="scanShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(34,38,43,0.18)"></stop>
+      <stop offset="100%" stop-color="rgba(34,38,43,0)"></stop>
+    </radialGradient>
+  </defs>
+  
+  <ellipse cx="130" cy="232" rx="98" ry="10" fill="url(#scanShadow)"></ellipse>
+
+  
+  <g opacity="0.75">
+    <rect x="60" y="120" width="14" height="40" rx="3" fill="#82CDB6"></rect>
+    <rect x="82" y="100" width="14" height="60" rx="3" fill="#3FA98D"></rect>
+    <rect x="200" y="118" width="14" height="42" rx="3" fill="#82CDB6"></rect>
+    <rect x="180" y="138" width="14" height="22" rx="3" fill="#A8DBC8"></rect>
+  </g>
+  <circle cx="56" cy="58" r="10" fill="#FFD24A"></circle>
+  <text x="56" y="63" text-anchor="middle" font-size="11" font-weight="800" fill="#9C6A1E" font-family="-apple-system, system-ui, sans-serif">₩</text>
+  <circle cx="210" cy="56" r="8" fill="#FFD24A" opacity="0.85"></circle>
+
+  
+  <g fill="#FFB800">
+    <path d="M34 130 l2 4 l4 2 l-4 2 l-2 4 l-2 -4 l-4 -2 l4 -2 z"></path>
+    <path d="M226 188 l2 4 l4 2 l-4 2 l-2 4 l-2 -4 l-4 -2 l4 -2 z"></path>
+  </g>
+
+  
+  <circle cx="130" cy="130" r="72" fill="url(#scanLens)" stroke="#5BBD9A" stroke-width="10"></circle>
+  
+  <ellipse cx="105" cy="105" rx="22" ry="14" fill="rgba(255,255,255,0.75)"></ellipse>
+
+  
+  <g transform="translate(95 120)" stroke="#22262B" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="0 30 12 14 24 22 36 6 48 18 60 4" stroke="#3FA98D" stroke-width="3"></polyline>
+    <line x1="0" y1="42" x2="62" y2="42" stroke="#22262B" stroke-width="1.6" opacity="0.5"></line>
+  </g>
+
+  
+  <path d="M184 184 L232 232" stroke="#5BBD9A" stroke-width="16" stroke-linecap="round"></path>
+  <path d="M184 184 L232 232" stroke="#3FA98D" stroke-width="5" stroke-linecap="round" opacity="0.45"></path>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="moimGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00B89E"></stop>
+      <stop offset="100%" stop-color="#008F7C"></stop>
+    </linearGradient>
+  </defs>
+  
+  <rect x="10" y="14" width="48" height="42" rx="10" fill="rgba(0,143,124,0.18)"></rect>
+  
+  <rect x="6" y="10" width="48" height="42" rx="10" fill="url(#moimGrad)"></rect>
+  
+  <rect x="10" y="20" width="40" height="24" rx="6" fill="#C8EFE3"></rect>
+  
+  <path d="M18 26l3 12l3-8l3 8l3-12M30 26l3 12l3-8l3 8l3-12" stroke="#00A38D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+</svg>

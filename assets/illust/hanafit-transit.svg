@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="busG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#82CDB6"></stop>
+      <stop offset="100%" stop-color="#3FA98D"></stop>
+    </linearGradient>
+    <radialGradient id="busFloor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(34,38,43,0.16)"></stop>
+      <stop offset="100%" stop-color="rgba(34,38,43,0)"></stop>
+    </radialGradient>
+  </defs>
+  <ellipse cx="100" cy="180" rx="74" ry="8" fill="url(#busFloor)"></ellipse>
+  
+  <rect x="36" y="72" width="128" height="92" rx="14" fill="url(#busG)"></rect>
+  
+  <rect x="44" y="78" width="112" height="6" rx="3" fill="rgba(255,255,255,0.25)"></rect>
+  
+  <rect x="50" y="92" width="100" height="38" rx="8" fill="#E8F2FF"></rect>
+  
+  <line x1="100" y1="92" x2="100" y2="130" stroke="#A8C6E8" stroke-width="1.5"></line>
+  
+  <rect x="80" y="100" width="40" height="14" rx="3" fill="#FFD24A"></rect>
+  <text x="100" y="111" text-anchor="middle" font-size="9" font-weight="800" fill="#22262B" font-family="-apple-system, system-ui, sans-serif">PASS</text>
+  
+  <rect x="120" y="138" width="14" height="22" rx="3" fill="rgba(255,255,255,0.5)"></rect>
+  
+  <circle cx="62" cy="148" r="5" fill="#FFD24A"></circle>
+  
+  <circle cx="64" cy="170" r="11" fill="#22262B"></circle>
+  <circle cx="64" cy="170" r="4" fill="#5E6976"></circle>
+  <circle cx="136" cy="170" r="11" fill="#22262B"></circle>
+  <circle cx="136" cy="170" r="4" fill="#5E6976"></circle>
+  
+  <rect x="20" y="120" width="44" height="30" rx="4" fill="#7567D5" transform="rotate(-12 42 135)"></rect>
+  <text x="42" y="139" text-anchor="middle" font-size="9" font-weight="800" fill="#fff" font-family="-apple-system, system-ui, sans-serif" transform="rotate(-12 42 135)">K-</text>
+  
+  <path d="M170 60 a14 14 0 1 1 -10 22" stroke="#3FA98D" stroke-width="2.5" fill="none" stroke-linecap="round"></path>
+  <path d="M158 80 l4 4 l-4 4" stroke="#3FA98D" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>

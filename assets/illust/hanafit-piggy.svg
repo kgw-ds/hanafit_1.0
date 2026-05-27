@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="pigG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFC1D9"></stop>
+      <stop offset="100%" stop-color="#E66BA0"></stop>
+    </linearGradient>
+    <radialGradient id="pigFloor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(34,38,43,0.16)"></stop>
+      <stop offset="100%" stop-color="rgba(34,38,43,0)"></stop>
+    </radialGradient>
+  </defs>
+  <ellipse cx="100" cy="180" rx="74" ry="8" fill="url(#pigFloor)"></ellipse>
+  
+  <ellipse cx="100" cy="130" rx="60" ry="44" fill="url(#pigG)"></ellipse>
+  
+  <path d="M68 92 L62 78 L82 86 Z" fill="#E66BA0"></path>
+  <path d="M132 92 L138 78 L118 86 Z" fill="#E66BA0"></path>
+  
+  <ellipse cx="140" cy="128" rx="14" ry="11" fill="#D75A92"></ellipse>
+  <circle cx="136" cy="128" r="2" fill="#22262B"></circle>
+  <circle cx="144" cy="128" r="2" fill="#22262B"></circle>
+  
+  <circle cx="118" cy="116" r="3" fill="#22262B"></circle>
+  
+  <rect x="68" y="166" width="10" height="14" rx="3" fill="#D75A92"></rect>
+  <rect x="124" y="166" width="10" height="14" rx="3" fill="#D75A92"></rect>
+  
+  <path d="M40 124 q-10 -2 -8 -12" stroke="#D75A92" stroke-width="3" fill="none" stroke-linecap="round"></path>
+  
+  <circle cx="80" cy="60" r="14" fill="#FFD24A"></circle>
+  <text x="80" y="66" text-anchor="middle" font-size="13" font-weight="800" fill="#9C6A1E" font-family="-apple-system, system-ui, sans-serif">₩</text>
+  
+  <rect x="74" y="92" width="20" height="6" rx="3" fill="#D75A92"></rect>
+  
+  <path d="M168 60 l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3 z" fill="#FFB800"></path>
+</svg>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bookG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9085E0"></stop>
+      <stop offset="100%" stop-color="#6C5DC2"></stop>
+    </linearGradient>
+    <linearGradient id="pencilG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFD988"></stop>
+      <stop offset="100%" stop-color="#E89A1F"></stop>
+    </linearGradient>
+    <radialGradient id="bookFloor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(34,38,43,0.16)"></stop>
+      <stop offset="100%" stop-color="rgba(34,38,43,0)"></stop>
+    </radialGradient>
+  </defs>
+  <ellipse cx="100" cy="178" rx="72" ry="8" fill="url(#bookFloor)"></ellipse>
+  
+  <rect x="56" y="120" width="100" height="20" rx="3" fill="#FFB068"></rect>
+  <rect x="50" y="140" width="106" height="22" rx="3" fill="url(#bookG)"></rect>
+  
+  <path d="M44 96 L100 86 L100 154 L44 164 Z" fill="#fff" stroke="#D4D4DC" stroke-width="1.2"></path>
+  <path d="M156 96 L100 86 L100 154 L156 164 Z" fill="#fff" stroke="#D4D4DC" stroke-width="1.2"></path>
+  
+  <line x1="56" y1="108" x2="92" y2="102" stroke="#B5BAC0" stroke-width="1.4"></line>
+  <line x1="56" y1="118" x2="88" y2="113" stroke="#B5BAC0" stroke-width="1.4"></line>
+  <line x1="56" y1="128" x2="90" y2="123" stroke="#B5BAC0" stroke-width="1.4"></line>
+  <line x1="108" y1="102" x2="148" y2="108" stroke="#B5BAC0" stroke-width="1.4"></line>
+  <line x1="108" y1="113" x2="146" y2="118" stroke="#B5BAC0" stroke-width="1.4"></line>
+  <line x1="108" y1="123" x2="148" y2="128" stroke="#B5BAC0" stroke-width="1.4"></line>
+  
+  <g transform="rotate(-30 100 78)">
+    <rect x="50" y="74" width="74" height="10" rx="2" fill="url(#pencilG)"></rect>
+    <polygon points="124,74 138,79 124,84" fill="#FFD988"></polygon>
+    <polygon points="138,79 132,79 130,79" fill="#22262B"></polygon>
+    <rect x="48" y="74" width="8" height="10" rx="2" fill="#FF8585"></rect>
+  </g>
+  
+  <path d="M170 56 l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3 z" fill="#FFB800"></path>
+</svg>
