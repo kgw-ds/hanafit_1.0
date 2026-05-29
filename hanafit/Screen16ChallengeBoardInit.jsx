@@ -3,15 +3,15 @@
 // 옅은 그린 그라데이션 · 진행 헤더 (0/5) · 미션 카드 5개 (미션 4 강조) · 시작 CTA
 const BOARD_MISSIONS_INIT = [
   { num: "1", icon: "🚌", title: "K-패스 등록",
-    sub: "교통비 30% 환급 시작", meta: "난이도 쉬움 · 즉시 완료" },
+    sub: "교통비 30% 환급 시작", meta: "난이도 쉬움 · 예상 월 1.5만원", hana: "하나카드 K-패스 카드 확인" },
   { num: "2", icon: "💰", title: "생활비 통장 분리",
-    sub: "자동저축 환경 만들기", meta: "난이도 쉬움" },
+    sub: "자동저축 환경 만들기", meta: "난이도 쉬움", hana: "하나 입출금통장 만들기" },
   { num: "3", icon: "🏠", title: "청년월세지원 신청",
-    sub: "월 최대 20만원 받기", meta: "난이도 중간" },
-  { num: "4", icon: "🏦", title: "청년미래적금 가입",
-    sub: "또래 81% 가입", meta: "난이도 쉬움 · 자동 입력", emphasis: true, star: true },
-  { num: "5", icon: "📱", title: "자동이체 설정",
-    sub: "매달 자동으로 저축", meta: "난이도 쉬움" },
+    sub: "월 최대 20만원 받기", meta: "난이도 중간 · 서류 필요", hana: "하나은행 이체내역 불러오기" },
+  { num: "4", icon: "🏦", title: "월 10만원 자동저축",
+    sub: "또래 81% 실천", meta: "난이도 쉬움 · 자동 입력", hana: "하나 적금 비교하기", emphasis: true, star: true },
+  { num: "5", icon: "🏡", title: "청약 유지",
+    sub: "내 집 마련 첫걸음", meta: "난이도 쉬움", hana: "하나 청약통장 확인" },
 ];
 
 const ChallengeBoardInitScreen = ({ onBack, onOpenMission }) => (
@@ -84,7 +84,7 @@ const ChallengeBoardInitScreen = ({ onBack, onOpenMission }) => (
 );
 
 // 미션 카드 row — board 화면 전용 (5미션 모두 ⭕ 시작 전 / 일부 완료 / 다음 미션 강조)
-const BoardMissionRow = ({ num, icon, title, sub, meta, emphasis, star,
+const BoardMissionRow = ({ num, icon, title, sub, meta, hana, emphasis, star,
                           done, doneDate, doneNote, next, nextNote, onClick }) => {
   // visual variant
   const isDone = !!done;
@@ -145,6 +145,14 @@ const BoardMissionRow = ({ num, icon, title, sub, meta, emphasis, star,
             fontSize: 11, color: "#8F97A0", marginTop: 3,
             letterSpacing: "-0.02em",
           }}>{meta}</div>
+        )}
+        {!isDone && hana && (
+          <div style={{
+            marginTop: 6, display: "inline-flex", alignItems: "center", gap: 4,
+            padding: "3px 8px", borderRadius: 6,
+            background: "#E0F5F0",
+            fontSize: 10.5, fontWeight: 700, color: "#00A38D", letterSpacing: "-0.02em",
+          }}>🏦 {hana}</div>
         )}
         {isNext && nextNote && (
           <div style={{

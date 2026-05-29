@@ -44,8 +44,17 @@ const MissionDetailScreen = ({ onBack, onStart, onAskAI }) => (
         borderRadius: 14, fontSize: 14, color: "#22262B",
         letterSpacing: "-0.02em", lineHeight: 1.55,
       }}>
-        또래 81%가 가입한 청년 전용 적금이에요.<br/>
-        우대금리까지 받으면 <b style={{ color: "#00A38D" }}>연 6.0%</b>까지 가능해요.
+        월 10만원 자동저축 미션을 이어가려면 적금을 비교해볼 수 있어요.<br/>
+        또래 81%가 선택한 청년 전용 적금은 우대금리까지 받으면 <b style={{ color: "#00A38D" }}>연 6.0%</b>까지 가능해요.
+      </div>
+
+      {/* 공적 우선 원칙 */}
+      <div style={{
+        marginTop: 12, padding: "12px 14px", borderRadius: 12,
+        background: "#F5F6FA",
+        fontSize: 12, color: "#5E6976", letterSpacing: "-0.02em", lineHeight: 1.5,
+      }}>
+        하나핏은 받을 수 있는 공적 혜택을 먼저 안내하고, 필요한 경우 금융상품을 보완 수단으로 제안합니다.
       </div>
 
       {/* 어떻게? */}
@@ -75,6 +84,13 @@ const MissionDetailScreen = ({ onBack, onStart, onAskAI }) => (
       <div style={{ marginTop: 16 }}>
         <HFSourceNote>공식 출처: 하나은행 상품몰 · 최종 확인 2026.05.20</HFSourceNote>
       </div>
+
+      {/* 하나금융 전환 지점 */}
+      <div style={{ marginTop: 16 }}>
+        <HFHanaLinkRow icon="🏦" label="하나 적금 비교하기"
+          sub="우대금리 조건을 한눈에 비교해보세요"
+          onClick={onStart}/>
+      </div>
     </div>
 
     <div style={{
@@ -83,7 +99,7 @@ const MissionDetailScreen = ({ onBack, onStart, onAskAI }) => (
       borderTop: "1px solid #F0F0F0",
       display: "flex", flexDirection: "column", gap: 10,
     }}>
-      <PrimaryCTA onClick={onStart}>미션 시작하기</PrimaryCTA>
+      <PrimaryCTA onClick={onStart}>하나원큐에서 상품 자세히 보기</PrimaryCTA>
       <OutlineBtn onClick={onAskAI}>AI에게 물어보기</OutlineBtn>
     </div>
   </div>

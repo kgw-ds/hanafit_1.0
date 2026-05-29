@@ -4,11 +4,14 @@
 // Persona: 최서연 24세, 서울 자취 대학생, 알바 + 부모님 용돈
 const { useState: useStateIntro } = React;
 
-const AIChatNewIntroScreen = ({ onBack, onSend }) => {
+const AIChatNewIntroScreen = ({ onBack, onSend, onOpen }) => {
   const [input, setInput] = useStateIntro("");
   const submit = (text) => {
     const t = (text || "").trim();
     if (!t) return;
+    // 정책 의사결정 → A / 위기대응 → B / 그 외 → 실시간 대화
+    if (t.includes("청년도약계좌")) { onOpen && onOpen("ai-decision"); return; }
+    if (t.includes("생활비") || t.includes("빠듯") || t.includes("부족")) { onOpen && onOpen("ai-crisis"); return; }
     onSend(t);
   };
   return (
@@ -36,6 +39,7 @@ const AIChatNewIntroScreen = ({ onBack, onSend }) => {
       }}/>
 
       <AINewHeader onBack={onBack}/>
+      <HFBreadcrumb onHome={() => onOpen && onOpen("home")}/>
 
       <div style={{
         flex: 1, overflow: "auto",
@@ -104,34 +108,34 @@ const AIChatNewIntroScreen = ({ onBack, onSend }) => {
 
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           <PromptCategory
-            color="#7567D5" bg="#F0E8F8"
-            icon="🏠" title="자취 살림"
-            chips={[
-              "월세 부담 줄이는 법",
-              "관리비 자동이체 설정",
-              "공과금 청년 할인",
-            ]}
-            onPick={submit}/>
-
-          <PromptCategory
             color="#00A38D" bg="#E0F5F0"
             icon="🎯" title="청년 혜택 · 정책"
             chips={[
-              "청년월세지원 받을 수 있어?",
-              "청년도약계좌 지금 들어도 돼?",
-              "K-패스 외에 또 받을 거?",
+              "나도 청년월세지원 받을 수 있어?",
+              "소득 기준이 헷갈려요",
+              "어떤 서류부터 준비해야 해?",
             ]}
             highlighted={0}
             onPick={submit}/>
 
           <PromptCategory
-            color="#FF8585" bg="#FFEDE9"
-            icon="📚" title="알바 · 학자금"
+            color="#7567D5" bg="#F0E8F8"
+            icon="🧭" title="금융 의사결정"
             chips={[
-              "알바 세금 신고 어떻게?",
-              "학자금 대출 vs 적금",
-              "방학에 단기 자금 굴리기",
+              "청년도약계좌 지금 들어도 돼?",
+              "청년도약계좌 vs 청년미래적금",
             ]}
+            badge="AI 상담"
+            onPick={submit}/>
+
+          <PromptCategory
+            color="#FF8585" bg="#FFEDE9"
+            icon="🆘" title="이번 달 위기 대응"
+            chips={[
+              "이번 달 생활비가 부족한데?",
+              "월세랑 생활비가 겹쳐서 빠듯해",
+            ]}
+            badge="AI 상담"
             onPick={submit}/>
         </div>
 
@@ -174,11 +178,8 @@ const AIChatNewIntroScreen = ({ onBack, onSend }) => {
 
         <div style={{
           marginTop: 16, padding: "0 4px",
-          fontSize: 11, color: "#8F97A0", letterSpacing: "-0.02em",
-          textAlign: "center", lineHeight: 1.5,
         }}>
-          FIT AI는 공식 정책 기준으로 답변하며,<br/>
-          자격은 신청 기관 최종 심사로 결정됩니다
+          <HFAISafety/>
         </div>
       </div>
 
@@ -245,7 +246,7 @@ const AIOrb = ({ size = 52 }) => (
   </div>
 );
 
-const PromptCategory = ({ icon, title, chips, color, bg, highlighted, onPick }) => (
+const PromptCategory = ({ icon, title, chips, color, bg, highlighted, badge, onPick }) => (
   <div style={{
     padding: "16px 16px 14px", borderRadius: 18,
     background: "rgba(255, 255, 255, 0.75)",
@@ -265,6 +266,13 @@ const PromptCategory = ({ icon, title, chips, color, bg, highlighted, onPick }) 
       <span style={{
         fontSize: 15, fontWeight: 700, color: "#22262B", letterSpacing: "-0.02em",
       }}>{title}</span>
+      {badge && (
+        <span style={{
+          marginLeft: "auto", fontSize: 10, fontWeight: 700,
+          color: "#7567D5", background: "#F0E8F8",
+          padding: "2px 8px", borderRadius: 9999, letterSpacing: "-0.02em",
+        }}>{badge}</span>
+      )}
     </div>
     <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
       {chips.map((c, i) => (

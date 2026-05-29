@@ -55,7 +55,7 @@ const MentorDetailScreen = ({ onBack, onFollow }) => (
           display: "flex", alignItems: "center", gap: 6,
         }}>
           <span style={{ fontSize: 14 }}>👥</span>
-          <b style={{ color: "#00A38D" }}>1,243명</b>의 또래가 함께하고 있어요
+          <b style={{ color: "#00A38D" }}>1,247명</b>의 또래가 함께하고 있어요
         </div>
       </div>
 
@@ -147,7 +147,7 @@ const MentorDetailScreen = ({ onBack, onFollow }) => (
       {/* Footer note */}
       <div style={{ padding: "18px 24px 0" }}>
         <HFLegalNote>
-          통계는 같은 멘토를 따라한 또래 1,243명의<br/>
+          통계는 같은 멘토를 따라한 또래 1,247명의<br/>
           익명 데이터를 기준으로 해요
         </HFLegalNote>
       </div>

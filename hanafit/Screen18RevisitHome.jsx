@@ -24,12 +24,6 @@ const RevisitHomeScreen = ({ onOpen }) => (
               display: "flex", alignItems: "center", justifyContent: "center",
             }}>3</span>
           </button>
-          <button style={{
-            background: "none", border: "none", cursor: "pointer",
-            padding: 4, color: "#22262B", display: "flex",
-          }} onClick={() => onOpen("notif-settings")}>
-            <HanaIcon name="settings" size={22}/>
-          </button>
         </>
       }/>
 
@@ -73,8 +67,8 @@ const RevisitHomeScreen = ({ onOpen }) => (
             onClick={() => onOpen("aichat-new")}/>
           <ValueEntry
             emoji="👥" tone="#7567D5" toneBg="#F0E8F8"
-            label="또래 비교" value="1,089명과 비교"
-            sub="상위 35% 진행 중"
+            label="또래 비교" value="1,247명과 비교"
+            sub="상위 23% 진행 중"
             onClick={() => onOpen("peer")}/>
         </div>
       </div>

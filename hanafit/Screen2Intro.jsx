@@ -20,7 +20,7 @@ const IntroScreen = ({ onBack, onNext, onDirect }) => (
         letterSpacing: "-0.02em", lineHeight: 1.55,
       }}>
         마이데이터 기반으로 받을 수 있는<br/>
-        정책·금융 혜택을 찾고, AI가 신청까지 도와줘요
+        정책·금융 혜택을 찾고, AI가 신청 조건과 준비 서류를 단계별로 안내해드려요
       </p>
 
       <div style={{ margin: "18px 0 28px", display: "flex", justifyContent: "center" }}>
@@ -36,8 +36,8 @@ const IntroScreen = ({ onBack, onNext, onDirect }) => (
           title="AI에게 쉽게 물어보기"
           sub="신청 서류부터 자격까지 한 번에"/>
         <HFFeatureCard index="3"
-          title="비슷한 또래 루틴 따라하기"
-          sub="상위 10% 또래의 금융 습관"/>
+          title="신청 체크리스트·금융 미션 연결"
+          sub="상위 또래 루틴으로 자산 형성까지"/>
       </div>
     </div>
 

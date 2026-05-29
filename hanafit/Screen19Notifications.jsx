@@ -58,7 +58,7 @@ const NotificationsScreen = ({ onBack, onOpen }) => {
           <HFNotificationItem
             icon="📊" kind="info"
             title="또래 변화"
-            body={<>또래 100명이 추가 가입했어요<br/><span style={{color:"#5E6976"}}>함께하는 또래 1,089명</span></>}
+            body={<>또래 100명이 추가 가입했어요<br/><span style={{color:"#5E6976"}}>함께 비교 중인 또래 1,247명</span></>}
             time="어제"
             last
             onClick={() => onOpen("peer")}/>

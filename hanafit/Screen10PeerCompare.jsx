@@ -46,7 +46,7 @@ const PeerCompareScreen = ({ onBack, onOpen }) => (
           marginTop: 6, padding: "10px 14px",
           background: "#F5F6FA", borderRadius: 12,
           fontSize: 13, color: "#22262B", letterSpacing: "-0.02em", lineHeight: 1.5,
-        }}>또래보다 약 16만원 적어요</div>
+        }}>비슷한 또래보다 수입 여유가 적은 편이라, 지출을 줄이기보다 받을 수 있는 혜택 연결을 먼저 추천해요</div>
       </Card>
 
       {/* Card 2 — 혜택 수령률 (강조) */}

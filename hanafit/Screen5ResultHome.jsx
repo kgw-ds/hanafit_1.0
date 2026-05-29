@@ -8,20 +8,20 @@ const ResultHomeScreen = ({ onOpen }) => (
   }}>
     <DrillHeader title="하나핏" onBack={() => onOpen("home")}
       right={
-        <>
-          <button style={{
-            background: "none", border: "none", cursor: "pointer",
-            padding: 4, color: "#22262B", display: "flex",
-          }} onClick={() => onOpen("notif-settings")}>
-            <HanaIcon name="settings" size={22}/>
-          </button>
+        <div style={{ display: "flex", alignItems: "center", gap: 2 }}>
           <button style={{
             background: "none", border: "none", cursor: "pointer",
             padding: 4, color: "#22262B", display: "flex",
           }} onClick={() => onOpen("notifications")}>
             <HanaIcon name="bell" size={22}/>
           </button>
-        </>
+          <button style={{
+            background: "none", border: "none", cursor: "pointer",
+            padding: 4, color: "#22262B", display: "flex",
+          }} onClick={() => onOpen("settings")}>
+            <HanaIcon name="settings" size={22}/>
+          </button>
+        </div>
       }/>
 
     <div style={{ flex: 1, overflow: "auto", padding: "8px 20px 30px" }}>
@@ -42,8 +42,7 @@ const ResultHomeScreen = ({ onOpen }) => (
           marginTop: 12, fontSize: 13, color: "#5E6976",
           letterSpacing: "-0.02em", lineHeight: 1.55,
         }}>
-          소비를 줄이는 것보다 받을 수 있는<br/>
-          지원을 먼저 연결하는 게 효과적이에요
+          혜택 놓침형: 소비 문제보다 받을 수 있는 정책·환급 혜택을 아직 충분히 활용하지 못한 상태예요
         </div>
       </div>
 
@@ -58,7 +57,16 @@ const ResultHomeScreen = ({ onOpen }) => (
         <HFMetricCard label="놓친 혜택" value="4개"
           sub="신청 가능성이 높아요" accent="#00A38D"/>
         <HFMetricCard label="예상 절감액" value="연 186만원"
-          sub="공식 기준 기반 추정" accent="#00A38D"/>
+          sub="신청 가능성 높은 혜택 기준" accent="#00A38D"/>
+      </div>
+
+      {/* 절감액 산정 근거 */}
+      <div style={{
+        marginTop: 10, padding: "11px 14px", borderRadius: 12,
+        background: "#F5F6FA",
+        fontSize: 11.5, color: "#8F97A0", letterSpacing: "-0.02em", lineHeight: 1.5,
+      }}>
+        📊 청년월세지원·K-패스·교통비 환급 등 신청 가능성 높은 혜택 기준 추정
       </div>
 
       {/* Primary CTA */}
@@ -76,7 +84,7 @@ const ResultHomeScreen = ({ onOpen }) => (
           onClick={() => onOpen("aichat-new")}/>
         <HFQuickActionCard emoji="👥" title="또래 비교" sub="익명 통계로 보기" accent="#7567D5"
           onClick={() => onOpen("peer")}/>
-        <HFQuickActionCard emoji="📊" title="컬린더" sub="마감 일정 조회" accent="#7567D5"
+        <HFQuickActionCard emoji="📅" title="캘린더" sub="마감 일정 조회" accent="#7567D5"
           onClick={() => onOpen("calendar")}/>
       </div>
 
@@ -94,12 +102,26 @@ const ResultHomeScreen = ({ onOpen }) => (
           onClick={() => onOpen("detail")} last/>
       </Card>
 
+      {/* 다음 금융 행동 */}
+      <div style={{
+        marginTop: 16, padding: "14px 16px", borderRadius: 14,
+        background: "#fff", border: "1px solid #ECECEC",
+      }}>
+        <div style={{ fontSize: 12, fontWeight: 700, color: "#5E6976", letterSpacing: "-0.02em", marginBottom: 6 }}>
+          다음 금융 행동
+        </div>
+        <div style={{ fontSize: 13.5, color: "#22262B", letterSpacing: "-0.02em", lineHeight: 1.5 }}>
+          K-패스 등록 · 생활비 통장 분리 · 월 10만원 자동저축
+        </div>
+      </div>
+
       <div style={{ marginTop: 18 }}>
         <HFLegalNote>
           추천 결과는 현재 확인 가능한 정보 기준이며,<br/>
           최종 자격은 공식 기관 심사에 따라 달라질 수 있어요
         </HFLegalNote>
       </div>
+      <HFReturnToHana onClick={() => onOpen("home")}/>
     </div>
   </div>
 );

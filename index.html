@@ -12,6 +12,7 @@
       font-family: var(--font-body); color: var(--fg1);
       -webkit-font-smoothing: antialiased; height: 100vh; overflow: hidden;
     }
+    #__bundler_err { display: none !important; }
     *::-webkit-scrollbar { display: none; width: 0; height: 0; }
     * { scrollbar-width: none; -ms-overflow-style: none; }
 
@@ -70,13 +71,14 @@
   <div class="stage">
     <div class="side">
       <h1>하나핏 · 최종 핸드오프</h1>
-      <div class="desc">청년 금융 어드바이저 (390×844) · 페르소나: 최서연(24세, 서울 자취)</div>
+      <div class="desc">하나원큐 앱인앱 청년 금융 (390×844) · 페르소나: 최서연(만 23세, 서울 자취)</div>
 
       <div class="group-label">① 진단까지</div>
       <div class="jump" id="jump">
         <button data-go="home"><span class="num">1</span>하나원큐 홈</button>
         <button data-go="intro"><span class="num">2</span>서비스 소개</button>
         <button data-go="consent"><span class="num">3</span>마이데이터 동의</button>
+        <button data-go="manual-input"><span class="num">3-1</span>직접 입력</button>
         <button data-go="analyzing"><span class="num">4</span>분석 중</button>
         <button data-go="result"><span class="num">5</span>진단 결과 홈</button>
       </div>
@@ -86,6 +88,7 @@
         <button data-go="list"><span class="num">6</span>맞춤 혜택</button>
         <button data-go="detail"><span class="num">7</span>혜택 상세</button>
         <button data-go="checklist"><span class="num">7-1</span>신청 체크리스트</button>
+        <button data-go="official-source"><span class="num">7-2</span>공식 출처</button>
         <button data-go="search"><span class="num">8</span>혜택 검색</button>
         <button data-go="calendar"><span class="num">9</span>캘린더</button>
       </div>
@@ -94,6 +97,8 @@
       <div class="jump">
         <button data-go="aichat-new"><span class="num">10</span>AI 첫 진입</button>
         <button data-go="aianswer-new"><span class="num">11</span>AI 대화</button>
+        <button data-go="ai-decision"><span class="num">11-1</span>AI 의사결정</button>
+        <button data-go="ai-crisis"><span class="num">11-2</span>AI 위기대응</button>
         <button data-go="history"><span class="num">12</span>상담 이력</button>
       </div>
 
@@ -126,7 +131,11 @@
         <button data-go="revisit"><span class="num">22</span>재방문 홈</button>
         <button data-go="savings-report"><span class="num">22-1</span>절감 리포트</button>
         <button data-go="notifications"><span class="num">23</span>알림센터</button>
-        <button data-go="notif-settings"><span class="num">24</span>알림 설정</button>
+      </div>
+
+      <div class="group-label">⑧ 설정</div>
+      <div class="jump">
+        <button data-go="settings"><span class="num">25</span>설정·마이데이터</button>
       </div>
 
       <div class="credit">
@@ -140,6 +149,19 @@
     </div>
   </div>
 
+  <script>
+    (function killBundlerErr() {
+      const remove = () => {
+        const el = document.getElementById('__bundler_err');
+        if (el) el.remove();
+      };
+      remove();
+      new MutationObserver(remove).observe(document.documentElement, {
+        childList: true, subtree: true,
+      });
+    })();
+  </script>
+
   <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
@@ -148,6 +170,7 @@
   <script type="text/babel" src="hana1q-app/components.jsx"></script>
 
   <script type="text/babel" src="hanafit/components.jsx"></script>
+  <script type="text/babel" src="hanafit/componentsV2.jsx"></script>
   <script type="text/babel" src="hanafit/Screen1Home.jsx"></script>
   <script type="text/babel" src="hanafit/Screen2Intro.jsx"></script>
   <script type="text/babel" src="hanafit/Screen3Consent.jsx"></script>
@@ -155,6 +178,8 @@
   <script type="text/babel" src="hanafit/Screen5ResultHome.jsx"></script>
   <script type="text/babel" src="hanafit/Screen6BenefitList.jsx"></script>
   <script type="text/babel" src="hanafit/Screen7BenefitDetail.jsx"></script>
+  <script type="text/babel" src="hanafit/Screen26ApplicationChecklist.jsx"></script>
+  <script type="text/babel" src="hanafit/Screen34SupportScreens.jsx"></script>
   <script type="text/babel" src="hanafit/Screen10PeerCompare.jsx"></script>
   <script type="text/babel" src="hanafit/Screen11FollowIntro.jsx"></script>
   <script type="text/babel" src="hanafit/Screen16ChallengeBoardInit.jsx"></script>
@@ -165,18 +190,17 @@
   <script type="text/babel" src="hanafit/Screen22ChallengeComplete.jsx"></script>
   <script type="text/babel" src="hanafit/Screen18RevisitHome.jsx"></script>
   <script type="text/babel" src="hanafit/Screen19Notifications.jsx"></script>
-  <script type="text/babel" src="hanafit/Screen21NotifSettings.jsx"></script>
   <script type="text/babel" src="hanafit/Screen22Search.jsx"></script>
   <script type="text/babel" src="hanafit/Screen23Calendar.jsx"></script>
   <script type="text/babel" src="hanafit/Screen24MentorPicker.jsx"></script>
   <script type="text/babel" src="hanafit/Screen25ChatHistory.jsx"></script>
-  <script type="text/babel" src="hanafit/Screen26ApplicationChecklist.jsx"></script>
   <script type="text/babel" src="hanafit/Screen27ProductDetail.jsx"></script>
   <script type="text/babel" src="hanafit/Screen28EasyJoin.jsx"></script>
   <script type="text/babel" src="hanafit/Screen29AIChatNewIntro.jsx"></script>
   <script type="text/babel" src="hanafit/Screen30AIChatNewAnswer.jsx"></script>
   <script type="text/babel" src="hanafit/Screen31MentorDetail.jsx"></script>
   <script type="text/babel" src="hanafit/Screen32SavingsReport.jsx"></script>
+  <script type="text/babel" src="hanafit/Screen33AIDecision.jsx"></script>
 
   <script type="text/babel">
     const Root = () => {
@@ -185,6 +209,7 @@
       React.useEffect(() => { window.__hfSet = setScreen; }, []);
 
       let body = null;
+      // ━━━ Onboarding ━━━
       if (screen === "home") body = <HanafitHomeScreen onOpen={setScreen}/>;
       else if (screen === "intro") body = <IntroScreen
         onBack={() => setScreen("home")}
@@ -193,10 +218,16 @@
       else if (screen === "consent") body = <ConsentScreen
         onBack={() => setScreen("intro")}
         onNext={() => setScreen("analyzing")}
-        onDirect={() => setScreen("analyzing")}/>;
+        onDirect={() => setScreen("manual-input")}/>;
+      else if (screen === "manual-input") body = <ManualInputScreen
+        onBack={() => setScreen("consent")}
+        onAnalyze={() => setScreen("analyzing")}
+        onOpen={setScreen}/>;
       else if (screen === "analyzing") body = <AnalyzingScreen
         onDone={() => setScreen("result")}/>;
       else if (screen === "result") body = <ResultHomeScreen onOpen={setScreen}/>;
+
+      // ━━━ Benefit exploration ━━━
       else if (screen === "list") body = <BenefitListScreen
         onBack={() => setScreen("result")}
         onOpenDetail={() => setScreen("detail")}
@@ -204,19 +235,33 @@
       else if (screen === "detail") body = <BenefitDetailScreen
         onBack={() => setScreen("list")}
         onChecklist={() => setScreen("checklist")}
-        onAskAI={() => setScreen("aichat-new")}/>;
+        onAskAI={() => setScreen("aichat-new")}
+        onOpen={setScreen}/>;
       else if (screen === "checklist") body = <ApplicationChecklistScreen
         onBack={() => setScreen("detail")}
-        onAskAI={() => setScreen("aichat-new")}/>;
+        onAskAI={() => setScreen("aichat-new")}
+        onOpen={setScreen}/>;
+      else if (screen === "official-source") body = <OfficialSourceScreen
+        onBack={() => setScreen("detail")}
+        onOpen={setScreen}/>;
       else if (screen === "search") body = <SearchScreen
         onBack={() => setScreen("revisit")}
         onOpen={setScreen}/>;
       else if (screen === "calendar") body = <CalendarScreen
         onBack={() => setScreen("revisit")}
         onOpen={setScreen}/>;
+
+      // ━━━ AI consultation (new) ━━━
       else if (screen === "aichat-new") body = <AIChatNewIntroScreen
         onBack={() => setScreen("result")}
-        onSend={(q) => { setPendingQuery(q); setScreen("aianswer-new"); }}/>;
+        onSend={(q) => { setPendingQuery(q); setScreen("aianswer-new"); }}
+        onOpen={setScreen}/>;
+      else if (screen === "ai-decision") body = <AIDecisionScreen
+        onBack={() => setScreen("aichat-new")}
+        onOpen={setScreen}/>;
+      else if (screen === "ai-crisis") body = <AICrisisScreen
+        onBack={() => setScreen("aichat-new")}
+        onOpen={setScreen}/>;
       else if (screen === "aianswer-new") body = <AIChatNewAnswerScreen
         onBack={() => { setPendingQuery(null); setScreen("aichat-new"); }}
         onOpen={setScreen}
@@ -224,6 +269,8 @@
       else if (screen === "history") body = <ChatHistoryScreen
         onBack={() => setScreen("notifications")}
         onOpen={setScreen}/>;
+
+      // ━━━ Peer · Mentor ━━━
       else if (screen === "peer") body = <PeerCompareScreen
         onBack={() => setScreen("result")}
         onOpen={setScreen}/>;
@@ -238,13 +285,15 @@
       else if (screen === "mentor-detail") body = <MentorDetailScreen
         onBack={() => setScreen("mentor")}
         onFollow={() => setScreen("boardActive")}/>;
+
+      // ━━━ Challenge (join flow) ━━━
       else if (screen === "boardInit") body = <ChallengeBoardInitScreen
         onBack={() => setScreen("follow")}
         onOpenMission={() => setScreen("missionDetail")}/>;
       else if (screen === "missionDetail") body = <MissionDetailScreen
         onBack={() => setScreen("boardInit")}
         onStart={() => setScreen("productDetail")}
-        onAskAI={() => setScreen("aichat-new")}/>;
+        onAskAI={() => setScreen("ai-decision")}/>;
       else if (screen === "productDetail") body = <ProductDetailScreen
         onBack={() => setScreen("missionDetail")}
         onJoin={() => setScreen("easyJoin")}
@@ -258,6 +307,8 @@
       else if (screen === "missionDone") body = <MissionCompleteScreen
         onClose={() => setScreen("revisit")}
         onNext={() => setScreen("boardActive")}/>;
+
+      // ━━━ Active challenge ━━━
       else if (screen === "boardActive") body = <ChallengeBoardActiveScreen
         onBack={() => setScreen("revisit")}
         onOpenMission={() => setScreen("missionDetail")}
@@ -266,14 +317,17 @@
         onBack={() => setScreen("revisit")}
         onNextMentor={() => setScreen("mentor")}
         onShare={() => setScreen("revisit")}/>;
+
+      // ━━━ Revisit ━━━
       else if (screen === "revisit") body = <RevisitHomeScreen onOpen={setScreen}/>;
       else if (screen === "notifications") body = <NotificationsScreen
         onBack={() => setScreen("revisit")}
         onOpen={setScreen}/>;
-      else if (screen === "notif-settings") body = <NotifSettingsScreen
-        onBack={() => setScreen("revisit")}/>;
       else if (screen === "savings-report") body = <SavingsReportScreen
         onBack={() => setScreen("revisit")}
+        onOpen={setScreen}/>;
+      else if (screen === "settings") body = <SettingsScreen
+        onBack={() => setScreen("result")}
         onOpen={setScreen}/>;
 
       const showTab = (screen === "home");
